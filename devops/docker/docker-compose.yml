@@ -1,0 +1,13 @@
+version: '3'
+services:
+  core:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: "skeleton-api-documentation-container"
+    volumes:
+      - ../../:/srv/service
+      - ../../artifacts/public:/srv/public
+      - ../../artifacts/logs:/tmp/log
+    ports:
+      - "8080"
