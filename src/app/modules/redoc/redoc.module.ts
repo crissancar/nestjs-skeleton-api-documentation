@@ -105,7 +105,11 @@ export class RedocModule {
 			},
 		};
 		// this is our handlebars file path
-		const redocFilePath = pathModule.join(process.cwd(), 'artifacts/redoc', 'redoc.handlebars');
+		const redocFilePath = pathModule.join(
+			process.cwd(),
+			'src/config/handlebars',
+			'redoc.handlebars',
+		);
 		// get handlebars rendered HTML
 		const redocHTML = await hbs.render(redocFilePath, renderData);
 		// Serve ReDoc Frontend
